@@ -20,7 +20,7 @@ public class TomcatVirtualThreadConfiguration {
     }
 
     /**
-     * AsyncTaskExecutor to enable async servlet support
+     * AsyncTaskExecutor to enable async servlet support and async tasks
      *
      * @param standardVirtualThreadExecutor standard virtual thread executor
      * @return async task executor
