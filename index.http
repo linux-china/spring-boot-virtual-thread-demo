@@ -1,0 +1,7 @@
+GET http://localhost:8080
+
+### Virtual Thread check
+GET http://localhost:8080/where-am-i
+
+### async servlet check
+GET http://localhost:8080/where-am-i-async
