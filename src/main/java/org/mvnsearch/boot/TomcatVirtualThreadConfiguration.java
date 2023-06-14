@@ -26,7 +26,7 @@ public class TomcatVirtualThreadConfiguration {
      * @return async task executor
      */
     @Bean
-    AsyncTaskExecutor applicationTaskExecutor(StandardVirtualThreadExecutor standardVirtualThreadExecutor) {
+    public AsyncTaskExecutor applicationTaskExecutor(StandardVirtualThreadExecutor standardVirtualThreadExecutor) {
         return new TaskExecutorAdapter(standardVirtualThreadExecutor);
     }
 
@@ -37,7 +37,7 @@ public class TomcatVirtualThreadConfiguration {
      * @return TomcatProtocolHandlerCustomizer
      */
     @Bean
-    TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer(StandardVirtualThreadExecutor standardVirtualThreadExecutor) {
+    public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer(StandardVirtualThreadExecutor standardVirtualThreadExecutor) {
         return protocolHandler -> {
             protocolHandler.setExecutor(standardVirtualThreadExecutor);
         };
