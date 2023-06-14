@@ -3,7 +3,7 @@ Spring Boot Virtual Thread Demo
 
 Spring Boot Virtual Thread Demo with Tomcat.
 
-* Java 21
+* Java 21: https://jdk.java.net/21/
 * Spring Boot 3.1.1-SNAPSHOT with Tomcat 10.1.10
                
 # Tomcat Virtual Threads Configuration
