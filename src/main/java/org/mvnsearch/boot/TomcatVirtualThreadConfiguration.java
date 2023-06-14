@@ -38,8 +38,6 @@ public class TomcatVirtualThreadConfiguration {
      */
     @Bean
     public TomcatProtocolHandlerCustomizer<?> protocolHandlerVirtualThreadExecutorCustomizer(StandardVirtualThreadExecutor standardVirtualThreadExecutor) {
-        return protocolHandler -> {
-            protocolHandler.setExecutor(standardVirtualThreadExecutor);
-        };
+        return protocolHandler -> protocolHandler.setExecutor(standardVirtualThreadExecutor);
     }
 }
