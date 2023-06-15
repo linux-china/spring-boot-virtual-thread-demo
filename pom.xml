@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-virtual-thread-demo</name>
     <description>spring-boot-virtual-thread-demo</description>
-    
+
     <properties>
         <java.version>20</java.version>
     </properties>
@@ -61,7 +61,7 @@
             </releases>
         </repository>
     </repositories>
-    
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-milestones</id>
