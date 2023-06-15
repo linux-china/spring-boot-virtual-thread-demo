@@ -5,7 +5,7 @@ Spring Boot Virtual Thread Demo with Tomcat.
 
 * Java 21: https://jdk.java.net/21/
 * Spring Boot 3.1.1-SNAPSHOT with Tomcat 10.1.10
-               
+
 # Tomcat Virtual Threads Configuration
 
 ```java
@@ -53,6 +53,9 @@ public class TomcatVirtualThreadConfiguration {
 
 ```
 
+# Async method on Virtual Threads
+
+Add `@EnableAsync` on Spring Boot main class, then add `@Async` on method.
 
 # References
 
@@ -60,4 +63,5 @@ public class TomcatVirtualThreadConfiguration {
 * JEP 444: Virtual Threads - https://openjdk.org/jeps/444
 * Spring Boot Asynchronous Requests: https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-async.html
 * Apache Tomcat 10.1.10 available: https://lists.apache.org/thread/20lp6fcf5c0gb5p32k9vwl8xbscc1h68
-* When virtual threads are enabled, configure Jetty to use them: https://github.com/spring-projects/spring-boot/issues/35703
+* When virtual threads are enabled, configure Jetty to use
+  them: https://github.com/spring-projects/spring-boot/issues/35703
