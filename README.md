@@ -4,7 +4,7 @@ Spring Boot Virtual Thread Demo
 Spring Boot Virtual Thread Demo with Tomcat.
 
 * Java 21: https://jdk.java.net/21/
-* Spring Boot 3.1.1-SNAPSHOT with Tomcat 10.1.10
+* Spring Boot 3.1.1 with Tomcat 10.1.10
 
 # Tomcat Virtual Threads Configuration
 
@@ -51,6 +51,17 @@ public class TomcatVirtualThreadConfiguration {
     }
 }
 
+```
+
+# Reactive on Virtual Threads
+
+```
+    @GetMapping("/reactive")
+    public String reactive() {
+        return Mono.just("Hello Reactor!").doOnNext(s -> {
+            System.out.println("Reactive on " + Thread.currentThread());
+        }).block();
+    }
 ```
 
 # Async method on Virtual Threads
