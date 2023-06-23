@@ -57,10 +57,10 @@ public class TomcatVirtualThreadConfiguration {
 
 ```
     @GetMapping("/reactive")
-    public String reactive() {
+    public Mono<String> reactive() {
         return Mono.just("Hello Reactor!").doOnNext(s -> {
             System.out.println("Reactive on " + Thread.currentThread());
-        }).block();
+        });
     }
 ```
 
