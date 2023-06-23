@@ -5,3 +5,6 @@ GET http://localhost:8080/where-am-i
 
 ### async servlet check
 GET http://localhost:8080/where-am-i-async
+
+### reactive testing
+GET http://localhost:8080/reactive
